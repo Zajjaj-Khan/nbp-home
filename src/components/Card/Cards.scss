@@ -1,0 +1,16 @@
+.divider{
+    border-bottom: 1px solid #b1a9a9; 
+}
+.cardFooter{
+    display: 'flex';
+    flex-direction: 'row'; 
+    justify-content:'space-between';
+    align-items:'center';
+    margin-top:'10px'
+}
+p{
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-family: 'Poppins-Bold';
+}

@@ -1,0 +1,22 @@
+.featureContainer{
+
+    h2{
+        font-family: "Exo2-Bold";
+        font-size: 27px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f4f4f4;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        padding:20px 12px;
+    }
+    .featureGrid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 1px;
+    }
+}

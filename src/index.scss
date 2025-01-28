@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('/src/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold; 
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'Exo2-Bold';
+  src: url('/src/assets/fonts/Exo2-Bold.ttf') format('truetype');
+  font-weight: bold; 
+  font-style: normal; 
+}
