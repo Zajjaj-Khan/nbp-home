@@ -1,5 +1,6 @@
-import { Container, Grid2, Box } from '@mui/material';
-import React from 'react'
+import { Grid2, Box } from '@mui/material';
+import React from 'react';
+import DigitalAccountOpening from '../DigitalAccountOpening';
 import './index.scss'
 import Features from '../Features';
 function MainContainer() {
@@ -9,7 +10,7 @@ function MainContainer() {
         <Box className='MainHeading' >
           <h2>
             Welcome to <br />
-            <span style={{ color: '#29d33d' }}>National Bank of Pakistan</span>
+            <span style={{ color: '#29d33d', fontFamily:'kanit-Bold' }}>National Bank of Pakistan</span>
           </h2>
         </Box>
       </Grid2>

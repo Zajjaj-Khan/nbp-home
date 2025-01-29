@@ -1,62 +1,58 @@
-import React, { useRef, useState } from 'react';
-import { Grid2, Card, CardContent, Typography, Box, IconButton } from '@mui/material';
+import { Box, Typography, Paper , CardContent } from "@mui/material";
+import NbpLogo from '../../assets/images/nbplogo.png';
 import { FaArrowRight } from "react-icons/fa";
-
 import './Cards.scss';
-
-
-const Cards = ({feature}) => {
+export default function Cards({feature}) {
   return (
-    <Box
-    display="flex"
-    gap={2}
-    sx={{ padding: 2 }}
-  >
-    {/* Card 1 */}
-    <Card
+    <Paper
+      elevation={4}
       sx={{
-        backgroundColor: "#A8E6CF", // Light green
-        color: "#000",
-        borderRadius: 2,
-        boxShadow: 3,
-        width: "400px",
+        position: "relative", 
+        padding: 2,
+        borderRadius: 3,
+        backgroundColor: `${feature.bgColor}`,
+        textAlign: "center",
+        margin: "20px",
+        width: '350px',
       }}
     >
-      <CardContent>
-        <Typography
-          variant="overline"
-          fontWeight="bold"
-          color="text.secondary"
-        >
-          {feature.strategy}
-        </Typography>
+      <Box
+        sx={{
+          position: "absolute",
+          backgroundColor:'#ffffff',
+          top: -20,
+          left: "50%",
+          transform: "translateX(-50%)",
+          color: "white",
+          fontSize: 12,
+          fontWeight: "bold",
+          px: 1.5,
+          py: 1.5,
+          borderRadius: "50%",
+          backgroundColor: "#ffffff",
+        }}
+      >
+       <img src={NbpLogo} width={'30px'}/>
+      </Box>  
+      <CardContent style={{marginTop:'20px' ,color: feature.color}}>
         <Typography variant="h6" fontWeight="bold" gutterBottom>
           {feature.title}
         </Typography>
-        <Typography variant="body2" mb={2}>
+        <Typography variant="body2" mb={2} style={{color: feature.color}}>
           {feature.description}
-        </Typography>
-        <Typography variant="subtitle1" fontWeight="bold">
-          {feature.cagr}
         </Typography>
         <div className='divider'/>
         <div style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:'center', marginTop:'10px'}}>
-        <p>
+        <p style={{color: feature.label}}>
           {feature.duration}
         </p>
-        <div style={{width:'35px', height:'35px', backgroundColor:'white',display:'flex', borderRadius:'7px', cursor:'pointer'}}>
+        <div style={{width:'35px', height:'35px',   backgroundColor: feature.btn,display:'flex', borderRadius:'7px', cursor:'pointer'}}>
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', width:'100%', height:'100%', borderRadius:'7px'}}>
-        <FaArrowRight />
+        <FaArrowRight color={feature.btnIcon} />
         </div>
         </div>
         </div>
-        <IconButton sx={{ position: "absolute", bottom: 16, right: 16 }}>
-      </IconButton>
-      </CardContent>
-     
-    </Card>
-    </Box>
+        </CardContent>
+    </Paper>
   );
-};
-
-export default Cards;
+}

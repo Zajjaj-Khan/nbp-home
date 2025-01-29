@@ -1,5 +1,4 @@
 .featureContainer{
-
     h2{
         font-family: "Exo2-Bold";
         font-size: 27px;
@@ -16,5 +15,7 @@
     .featureGrid{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
