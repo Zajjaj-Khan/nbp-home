@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Grid2, Card, CardContent, Typography, Box, IconButton } from '@mui/material';
 import { FaArrowRight } from "react-icons/fa";
 
@@ -17,9 +17,9 @@ const Cards = ({feature}) => {
       sx={{
         backgroundColor: "#A8E6CF", // Light green
         color: "#000",
-        width: 450,
         borderRadius: 2,
         boxShadow: 3,
+        width: "400px",
       }}
     >
       <CardContent>
