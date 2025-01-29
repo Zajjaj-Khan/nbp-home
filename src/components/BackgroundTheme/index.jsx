@@ -10,7 +10,7 @@ function BackgroundTheme({ children }) {
                 {children}
             </div>
         </div >
-        <div>
+        <div className='digitalAccount'>
             <DigitalAccountOpening />
         </div>
         </div>
