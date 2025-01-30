@@ -1,6 +1,8 @@
 import React from 'react'
 import './BackgroundTheme.scss'
 import DigitalAccountOpening from '../DigitalAccountOpening'
+import RoshanAccountOpening from '../RoshanAccountOpening'
+
 function BackgroundTheme({ children }) {
     return (
         <div>
@@ -12,6 +14,7 @@ function BackgroundTheme({ children }) {
         </div >
         <div className='digitalAccount'>
             <DigitalAccountOpening />
+            <RoshanAccountOpening />
         </div>
         </div>
     )

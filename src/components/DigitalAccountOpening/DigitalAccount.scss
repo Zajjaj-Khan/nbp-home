@@ -1,0 +1,72 @@
+.mainCotainer{
+    min-height: 100dvh;
+    
+}
+.digital-account-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.digital-account-image{
+  background: url("../../assets/images/digital-account.jpg") no-repeat center/cover;
+  border-top-left-radius:100px;
+  border-bottom-left-radius:100px;
+  min-height: 100vh;
+
+}
+.digital-account-content {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 20px; 
+
+    .heading{
+        font-family: 'Poppins-Bold';
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .description{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .btn{
+        background-color: #188749 ;
+        color: #ffffff;
+        font-family: 'Poppins-Bold';
+        font-size: 14px;
+        padding: 20px 20px ;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        border: 1px solid #188749;
+        &:hover{
+            background-color: #ffffff;
+            color: #188749;
+        }
+    }
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        .btn{
+            font-size: 12px;
+            padding: 18px 18px
+        }
+
+        @media (max-width: 480px) { /* Further scaling for very small devices */
+            .heading {
+                font-size: 30px;
+            }
+            .description {
+                font-size: 12px;
+            }
+            .btn{
+                font-size: 11px;
+                padding: 12px 12px
+            }
+        }
+    }
+}
+
+
