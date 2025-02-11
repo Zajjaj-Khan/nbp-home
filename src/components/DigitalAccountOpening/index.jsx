@@ -1,6 +1,8 @@
 import { Grid2 ,Typography, Button} from '@mui/material';
 import React from 'react';
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { AiFillBank } from "react-icons/ai";
+
 import './DigitalAccount.scss'
 function index() {
   return (
@@ -10,6 +12,9 @@ function index() {
     
       <Grid2 size={{xs:6,sm:6,lg:6}} >
       <div className='digital-account-content'>
+        <div className='digital-icon'>
+        <AiFillBank size={60}/>
+        </div>
         <Typography variant="h4" fontWeight="bold" className='heading' >
           Digital Account Opening
         </Typography>

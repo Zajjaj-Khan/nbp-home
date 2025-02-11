@@ -31,13 +31,13 @@ const DATA = [
   },
  
 ]
-const Features = props => {
+const Features = ({handleButtonClick,relativeBtnRef,onProductSelect}) => {
   return (
     <div className='featureContainer'>
       <div className="featureGrid">
       {
         DATA.map((feature, index) => (
-          <Cards key={index} feature={feature} />
+          <Cards key={index} feature={feature} handleButtonClick={handleButtonClick} relativeBtnRef= {relativeBtnRef} onProductSelect={onProductSelect}/>
         ))
       }
       

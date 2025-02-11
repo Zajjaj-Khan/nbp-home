@@ -1,6 +1,7 @@
 import { Grid2 ,Typography, Button} from '@mui/material';
 import React from 'react';
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { GiWallet } from "react-icons/gi";
 import './RoshanAcount.scss'
 function index() {
   return (
@@ -9,6 +10,9 @@ function index() {
          <Grid2 container spacing={2}  >
       <Grid2 size={{xs:6,sm:6,lg:6}} >
       <div className='roshan-account-content'>
+         <div className='roshan-icon'>
+                <GiWallet size={60} color={'#188749'}/>
+                </div>
         <Typography variant="h4" fontWeight="bold" className='heading' >
           Roshan Digital Account Opening
         </Typography>

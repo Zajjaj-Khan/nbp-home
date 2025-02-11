@@ -3,7 +3,7 @@ import React from 'react';
 import DigitalAccountOpening from '../DigitalAccountOpening';
 import './index.scss'
 import Features from '../Features';
-function MainContainer() {
+function MainContainer({handleButtonClick,relativeBtnRef,onProductSelect}) {
   return (
     <div className='mainContainer'>
       <Grid2 size={{ sm:12,lg:12 }} className="headingGrid">
@@ -15,7 +15,7 @@ function MainContainer() {
         </Box>
       </Grid2>
       <Grid2 size={{ sm:12 , lg:12 }}>
-          <Features/>
+          <Features handleButtonClick={handleButtonClick} relativeBtnRef={relativeBtnRef} onProductSelect={onProductSelect}/>
       </Grid2>
       </div>
   )

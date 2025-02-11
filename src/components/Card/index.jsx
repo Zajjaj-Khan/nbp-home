@@ -2,7 +2,7 @@ import { Box, Typography, Paper , CardContent } from "@mui/material";
 import NbpLogo from '../../assets/images/nbplogo.png';
 import { FaArrowRight } from "react-icons/fa";
 import './Cards.scss';
-export default function Cards({feature}) {
+export default function Cards({feature,handleButtonClick,relativeBtnRef,onProductSelect}) {
   return (
     <Paper
       elevation={4}
@@ -47,7 +47,8 @@ export default function Cards({feature}) {
           {feature.duration}
         </p>
         <div style={{width:'35px', height:'35px',   backgroundColor: feature.btn,display:'flex', borderRadius:'7px', cursor:'pointer'}}>
-        <div style={{display:'flex', justifyContent:'center', alignItems:'center', width:'100%', height:'100%', borderRadius:'7px'}}>
+        <div ref={relativeBtnRef} style={{display:'flex', justifyContent:'center', alignItems:'center', width:'100%', height:'100%', borderRadius:'7px'}} onClick={() => {handleButtonClick(),onProductSelect(feature.title)}}
+        >
         <FaArrowRight color={feature.btnIcon} />
         </div>
         </div>
