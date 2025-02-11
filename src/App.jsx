@@ -12,6 +12,11 @@ export default function App() {
   const relativeBtnRef = useRef(null); // Ref for the button
 
   useEffect(() => {
+    console.log("Intersection Observer supported?", "IntersectionObserver" in window);
+
+  },[]);
+
+  useEffect(() => {
     if (!relativeBtnRef.current) {
       console.error("Element '.relativeBtn' not found.");
       return;
@@ -35,6 +40,8 @@ export default function App() {
     );
 
     observer.observe(relativeBtnRef.current);
+    return () => observer.disconnect(); // Cleanup observer
+
 
   }, []);
 
